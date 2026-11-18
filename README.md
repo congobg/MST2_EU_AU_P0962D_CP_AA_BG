@@ -40,7 +40,7 @@ Firmware update for the **Audi MIB2 STD2Plus** head unit (`MST2_EU_AU_P0962D`, H
 3. Start the engine, or connect a battery charger, so the voltage stays stable during the update. **Do not switch off the unit while it updates.**
 4. Insert the SD card into the MMI.
 5. Open the **green engineering menu** and activate **user defined mode** for the software update (SWDL).
-6. Start the update: **Update > Manual SWDL**, choose the SD card, then **Select AP_ZR_BASE4 and MMC01 at least if unit is alsread on 0962**.
+6. Start the update: **Update > Manual SWDL**, choose the SD card, then **Select AP_ZR_BASE4 and MMC01 at least if unit is already on 0962**.
 7. Confirm and wait until the update reports it is finished. The unit restarts by itself, maybe more than once.
 8. Remove the SD card.
 
