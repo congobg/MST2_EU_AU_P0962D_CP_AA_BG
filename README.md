@@ -10,9 +10,7 @@ Firmware update for the **Audi MIB2 STD2Plus** head unit (`MST2_EU_AU_P0962D`, H
 | **Android Auto** | Wired Android Auto over USB. The MMI knob and buttons work in Android Auto. |
 | **Bulgarian language** | *Settings > Language > Български*, with a Bulgarian flag. It is a new 41st language: Russian and all other languages are unchanged. |
 | **Voice in Bulgarian mode** | Screens are Bulgarian. Navigation voice, voice control and spoken reminders (e.g. "mobile phone still in the vehicle") stay **English**, because the unit has no Bulgarian voice. |
-| **Keyboard** | The text speller starts in Latin; Cyrillic is on the alphabet toggle. |
 | **Version information** | *Settings > Version information* shows "CarPlay and Android Auto by Congo" under the software version, in every language. |
-| **Production hardening** | No network login: telnet, ftp and rlogin are off, even with a USB-Ethernet adapter. |
 
 ## What was done
 
@@ -24,10 +22,6 @@ Firmware update for the **Audi MIB2 STD2Plus** head unit (`MST2_EU_AU_P0962D`, H
 
 **Bulgarian language**
 - **Translation:** all 13,400+ menu texts were translated. 12,710 were reused from an existing MHI2 Bulgarian translation where the English and Russian texts match exactly; the remaining 708 were newly translated and checked.
-
-**Package**
-- All checksums, block hashes and the package signature were recalculated, and the result was verified (`metainfo_tool.py --deep`: ALL OK).
-- The PROD build differs from the test build `..._v18_BG` only in two `/ffs` files (`netstart`, `inetd.conf`) that no longer start network login.
 
 **Tested on the car**
 - CarPlay, Android Auto, Bulgarian menus and flag, English voice and reminders, and the Version information line all work.
@@ -49,11 +43,9 @@ Firmware update for the **Audi MIB2 STD2Plus** head unit (`MST2_EU_AU_P0962D`, H
 - *Settings > Version information* shows "CarPlay and Android Auto by Congo".
 - *Settings > Language > Български* switches the menus to Bulgarian.
 - Connecting an iPhone (CarPlay) or an Android phone (Android Auto) by USB starts the smartphone interface.
-- Optional: with a USB-Ethernet adapter, telnet to the unit is refused.
 
 ## Good to know
 
-- **No remote shell.** The PROD build has no telnet or ftp. If shell access is ever needed (diagnosis, hot-swaps, the `/ffs/etc/bg_off` switch), flash the non-PROD package `MST2_EU_AU_P0962D_CARPLAY_v18_BG` the same way. It is identical except that telnet and ftp work with a USB-Ethernet adapter.
 - **Back to stock.** Flash the original `MST2_EU_AU_P0962D` package the same way (Manual SWDL > Select all).
 - **Other languages are unaffected.** They keep their own texts, voice and keyboard.
 
