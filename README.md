@@ -1,6 +1,7 @@
 # MST2_EU_AU_P0962D_CP_AA_BG
 
 Firmware update for the **Audi MIB2 STD2Plus** head unit (`MST2_EU_AU_P0962D`, HMI `HMI_AU_MIB2_S_EU_G21_C8P_174700`) that adds **Apple CarPlay**, **Android Auto** and a **Bulgarian** menu language to the original Audi software.
+Supported modules for now are only 8W0 - A4/A5/Q5 MLB cars.
 
 ## New functionality
 
